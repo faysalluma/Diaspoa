@@ -5,7 +5,9 @@ import com.groupec.sampleapp.data.HomeRepositoryImpl
 import com.groupec.sampleapp.domain.GetDetailUseCase
 import com.groupec.sampleapp.domain.GetHomeUseCase
 import com.groupec.sampleapp.network.SpaceXApi
-import com.groupec.sampleapp.ui.detail.DetailViewModel
+import com.groupec.diaspoa.presentation.screens.account.AccountViewModel
+import com.groupec.diaspoa.presentation.screens.project.ProjectViewModel
+import com.groupec.diaspoa.presentation.screens.shopping.ShoppingViewModel
 import com.groupec.sampleapp.ui.home.HomeViewModel
 import org.koin.compose.viewmodel.dsl.viewModel
 import org.koin.core.KoinApplication
@@ -18,23 +20,21 @@ import org.koin.dsl.module
 expect val targetModule : Module
 
 val sharedModule = module {
+
+    // ViewModels
+    viewModel { HomeViewModel(get()) }
+    viewModel { ShoppingViewModel() }
+    viewModel { ProjectViewModel() }
+    viewModel { AccountViewModel() }
+
+    // Uses cases
     single { GetHomeUseCase(get()) }
     single { GetDetailUseCase() }
-    single<SpaceXApi> { SpaceXApi() }
-    // single { Database(get()) }
 
+    // Repositories
     singleOf(::HomeRepositoryImpl).bind<HomeRepository>()
-    viewModel { HomeViewModel(get()) }
-    viewModel { DetailViewModel(get()) }
+    single<SpaceXApi> { SpaceXApi() }
 }
-
-/*single {
-    HttpClient(get()) {
-        defaultRequest {
-            contentType(ContentType.Application.Json)
-        }
-    }
-}*/
 
 fun initializeKoin(config: (KoinApplication.() -> Unit) ? = null) {
     startKoin {

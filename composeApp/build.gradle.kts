@@ -56,6 +56,7 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+            implementation(compose.material3)
 
             implementation(libs.ktor.client.android)
             implementation(libs.androidx.lifecycle.viewmodel.ktx)
@@ -70,7 +71,9 @@ kotlin {
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
-            implementation(compose.material3)
+            implementation(compose.material)
+            implementation(libs.material.icons.extended)
+            implementation(compose.material3) // Material 3
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
@@ -83,7 +86,8 @@ kotlin {
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.kotlinx.json)
             implementation(libs.kotlinx.datetime)
-            implementation(libs.navigation.compose)
+            implementation(libs.navigation.compose) // Navigation
+            implementation(libs.screen.size)  // window-size
             implementation(libs.viewmodel.compose)
             implementation(libs.koin.core)
             implementation(libs.koin.compose)

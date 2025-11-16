@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Diaspoa</string>
+    <string name="home">Home</string>
+    <string name="shopping">Shopping</string>
+    <string name="projects">Projects</string>
+    <string name="account">Account</string>
+    <string name="title_what_do_you_want">What would you like to do?</string>
+    <string name="one_time_shopping">One-time shopping trip</string>
+    <string name="one_time_shopping_detail">Administrative, Food, Electronics, Appliances, Pharmacy, School</string>
+    <string name="project_tracking">Project tracking</string>
+    <string name="project_tracking_detail">Construction, Housing, Other</string>
+    <string name="hello">Hello, %1$s</string>
+    <string name="stat_title_shopping">Shopping this month</string>
+    <string name="stat_title_projects">Active projects</string>
 </resources>

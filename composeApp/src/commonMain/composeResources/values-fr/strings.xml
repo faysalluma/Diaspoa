@@ -1,3 +1,14 @@
 <resources>
-
+    <string name="home">Accueil</string>
+    <string name="shopping">Courses</string>
+    <string name="account">Compte</string>
+    <string name="projects">Projets</string>
+    <string name="title_what_do_you_want">Que souhaitez-vous faire ?</string>
+    <string name="one_time_shopping">Course ponctuelle</string>
+    <string name="one_time_shopping_detail">Administrative, Alimentaire, Electronique, Electroménager, Pharmacie, Scolaire</string>
+    <string name="project_tracking">Suivi projet</string>
+    <string name="project_tracking_detail">Construction, Logements, autres</string>
+    <string name="hello">Bonjour, %1$s</string>
+    <string name="stat_title_shopping">Courses pour ce mois</string>
+    <string name="stat_title_projects">Projets actifs</string>
 </resources>
